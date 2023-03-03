@@ -8,11 +8,14 @@
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.2/css/all.min.css"
     integrity="sha512-1sCRPdkRXhBV2PBLUdRb4tMg1w2YPf37qatUFeS7zlBy7jJI8Lf4VHwWfZZfpXtYSLy85pkm9GaYVYMfw5BC1A=="
     crossorigin="anonymous" referrerpolicy="no-referrer" />
-  <title>Portfolio</title>
+
   <link rel="stylesheet" href="styles.css" />
+
+  <title>Portfolio</title>
 </head>
 
 <body>
+
   <!-- MENU ENCABEZADO -->
   <div class="contenedor-header">
     <header>
@@ -28,7 +31,7 @@
           <li><a href="#portfolio">PORTFOLIO</a></li>
           <li><a href="#contacto">CONTACTO</a></li>
         </ul>
-        
+
         <div class="toggle_btn">
           <i class="fa-solid fa-bars"></i>
         </div>
@@ -398,18 +401,28 @@
     <div class="contenido-seccion">
       <h2>CONTACTO</h2>
       <div class="fila">
-        <!-- Formulario -->
-        <div class="col">
-          <input type="text" placeholder="Tú Nombre" />
-          <input type="text" placeholder="Número telefónico" />
-          <input type="text" placeholder="Dirección de correo" />
-          <input type="text" placeholder="Tema" />
-          <textarea name="" id="" cols="30" rows="10" placeholder="Mensaje"></textarea>
-          <button>
+        <!-- Formulario-->
+        <form id="formulario" class="col"  action="https://formspree.io/f/xvonrqjv" method="POST">
+
+          <input type="text" id="nombre" name="nombre" placeholder="Tú Nombre" />
+          <div class="alert alert-warnings alerta_nombre" role="alert"></div>
+
+          <input type="text" id="correo" name="email" placeholder="Dirección de correo" />
+          <div class="alert alert-warnings alerta_correo" role="alert"></div>
+
+          <input type="text" id="asunto" name="asunto" placeholder="Asunto" />
+          <div class="alert alert-warnings alerta_asunto" role="alert"></div>
+
+          <textarea id="mensaje" name="mensaje" cols="30" rows="10" placeholder="Mensaje"></textarea>
+
+          <button type="submit">
             Enviar Mensaje <i class="fa-solid fa-paper-plane"></i>
             <span class="overlay"></span>
           </button>
-        </div>
+          <p class="warnings" id="warnings">
+          <p class="correctoE" id="correctoE">
+
+        </form>
         <!-- Mapa -->
         <div class="col">
           <img src="img/ubicacion.png" alt="" />
@@ -449,6 +462,7 @@
   </footer>
 
   <script src="script.js"></script>
+
 </body>
 
 </html>

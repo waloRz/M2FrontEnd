@@ -11,6 +11,22 @@ html {
 }
 
 /*##################################  yo merito*/
+
+.warnings {
+  width: 200px;
+  text-align: center;
+  margin: auto ;
+  color: red;
+  padding-top: 20px;
+}
+
+.correctoE {
+  color: rgb(103, 193, 221);
+  display: block;
+  text-align: center;
+  font-weight:100px;
+}
+
 li {
   list-style-type: none;
 }
